@@ -7,5 +7,6 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(worksheet="menu_items")
 
 # Display the data.
-for row in df.itertuples():
-    st.write(f"{row.name} has a :{row.pet}:")
+#for row in df.itertuples():
+#    st.write(f"{row.name} has a :{row.pet}:")
+st.dataframe(df)
