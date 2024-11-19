@@ -8,7 +8,10 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(worksheet="menu_items")
 
 #title of app
-st.title(":taco: :green salad: Welcome to Jacapaca! :clinking beer mugs:")
+st.title(":taco: Bienvenido a Jacapaca! :beers:")
+username = st.text_input("Write your name:")
+party_id = st.text_input("Hi ", username, "! Write your party id:")
+check_party = st.button('Check party details')
 
 # Display the data.
 #for row in df.itertuples():
